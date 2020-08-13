@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+<p>
+{% include 'blog/list-inline.html' with blog_post=object detail=True %}
+{% if request.user.is_authenticated %}
+	{% if request.user.is_staff %}
+	<div class="col-12" style="text-align:center;">
+		<button type="button" class="btn btn-outline-info">
+		<a href='{{ object.get_edit_url }}'> Edit </a>
+		</button>
+		<button type="button" class="btn btn-outline-info">
+		<a href='{{ object.get_delete_url}}'> Delete </a>
+		</button>
+	</div>	
+	{% endif %}
+{% endif %}		
+</p>
+{% endblock %}
