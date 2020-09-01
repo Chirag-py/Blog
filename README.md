@@ -1,3 +1,3 @@
 # Blog
-Design and Developed a interactive blogging platform.
+Design and Developed an interactive blogging platform.
 Objective was to learn Django.
